@@ -1,0 +1,71 @@
+<form class="mb-3 palette_2 py-4 px-4 signForm" id="signForm" action="">
+  <div class="form-floating mb-5"><h2 class="palette_2">Sign In</h2></div>
+  <div class="form-floating">
+    <input
+      class="form-control"
+      type="text"
+      name="name"
+      id="name"
+      placeholder="Name"
+      autocomplete="given-name"
+      required
+    />
+    <label for="name">First name</label>
+  </div>
+  <div class="form-floating">
+    <input
+      class="form-control"
+      type="text"
+      name="lastName"
+      id="lastName"
+      placeholder="Last name"
+      autocomplete="family-name"
+      required
+    />
+    <label for="lastName">Last name</label>
+  </div>
+  <div class="form-floating">
+    <input
+      class="form-control"
+      type="email"
+      name="email"
+      id="email"
+      placeholder="example_email@gmail.com"
+      autocomplete="email"
+      required
+    />
+    <label for="email">Email</label>
+  </div>
+  <div class="form-floating">
+    <input
+      class="form-control"
+      type="password"
+      name="password"
+      id="password"
+      placeholder="Password"
+      autocomplete="new-password"
+      required
+    />
+    <label for="password">Password</label>
+  </div>
+  <div class="form-floating">
+    <input
+      class="form-control"
+      type="password"
+      name="password"
+      id="re_password"
+      placeholder="Repeat password"
+      autocomplete="new-password"
+      required
+    />
+    <label for="re_password">Repeat password</label>
+  </div>
+
+  <input
+    class="form-control mt-5 mx-auto palette_3 buttonForm"
+    type="submit"
+    name="submit"
+    id="submit"
+    value="Sign In"
+  />
+</form>

@@ -1,0 +1,274 @@
+/** Root vars */
+:root {
+  --primaryLight: #fcf8f1;
+  --primaryContrast: #1d5175;
+  --secondaryContrast: #e98a4e;
+  --tertiaryContrast: #ffbd15;
+}
+
+/*! Selectors */
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+hr {
+  height: 1px;
+  background-color: var(--primaryContrast);
+  opacity: 80%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*! Page sections */
+.customSection {
+  height: 100vh !important;
+  padding-top: max(2.5vh, 20px);
+  padding-bottom: max(2.5vh, 20px);
+  padding-right: max(3vw, 30px);
+  padding-left: max(9vw, 30px);
+}
+
+/*!Theme colors */
+.palette_1 {
+  background-color: var(--primaryLight);
+  color: var(--primaryContrast);
+}
+.palette_2 {
+  background-color: var(--primaryContrast);
+  color: var(--primaryLight);
+}
+.palette_3 {
+  background-color: var(--secondaryContrast);
+  color: var(--primaryLight);
+}
+.palette_aux {
+  color: var(--tertiaryContrast);
+}
+
+/*!Boostrap customized carousel */
+
+.carousel-indicators {
+  flex-direction: column;
+  width: fit-content;
+  margin: auto 0 auto 2%;
+  bottom: 0;
+  top: 0;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: black;
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  margin: 15px 0;
+}
+
+.carousel-item-next:not(.carousel-item-start),
+.active.carousel-item-end {
+  transform: translateY(100%);
+}
+
+.carousel-item-prev:not(.carousel-item-end),
+.active.carousel-item-start {
+  transform: translateY(-100%);
+}
+
+/*#region List Item */
+
+.box {
+  max-width: 1200px;
+  padding: 5px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 19px 6px #e9894e4b;
+  box-shadow: 0px 0px 19px 6px #e9894e4b;
+}
+
+.itemContainer {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--primaryLight);
+  justify-content: space-between;
+}
+
+.itemContainer:last-child {
+  border-bottom: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.item > p {
+  margin: 0;
+}
+
+.item input:checked + p {
+  text-decoration: line-through;
+  text-decoration-color: var(--secondaryContrast);
+}
+
+.item input[type='checkbox'] {
+  margin: 20px;
+  pointer-events: none;
+}
+
+.item input[type='text'] {
+  text-align: center;
+  border: none;
+  background: transparent;
+  margin: 0 auto;
+  color: var(--primaryLight);
+}
+
+.item input[type='text']:focus {
+  outline: none;
+  box-shadow: inset 0 -2px 0 0 var(--secondaryContrast);
+}
+#home-list_input_example {
+  display: block;
+  pointer-events: none;
+  outline: none;
+  width: 17ch;
+  box-shadow: inset 0 -2px 0 0 var(--secondaryContrast);
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 1.5s steps(20), blink-caret 0.75s step-end infinite;
+}
+
+/*#endregion */
+
+.home_btn {
+  width: 50%;
+  height: max-content;
+}
+
+.btn {
+  border-color: var(--primaryContrast);
+  color: var(--primaryContrast);
+}
+
+.btn:hover {
+  background-color: var(--primaryContrast);
+  color: var(--primaryLight);
+  box-shadow: 0 0 0 3px var(--tertiaryContrast);
+}
+.btn-primary {
+  background-color: var(--primaryContrast);
+  color: var(--primaryLight);
+}
+
+.btn:focus,
+.btn:active {
+  box-shadow: 0 0 0 3px var(--tertiaryContrast);
+}
+
+.contact_img {
+  height: 15vh;
+  width: 15vh;
+  max-width: 100%;
+}
+
+ion-icon {
+  color: var(--primaryContrast);
+  transition: all 0.2s ease-in-out;
+}
+ion-icon:hover {
+  transform: scale(2);
+}
+
+/*#region Media queries*/
+
+@media (max-width: 575.98px) {
+  .carousel-indicators {
+    flex-direction: row;
+    width: fit-content;
+    top: auto;
+    bottom: 0;
+    margin: 0 auto 2% auto;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    margin: 0 15px;
+  }
+}
+@media (max-height: 575.98px) {
+  .footerPage {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .contact_img {
+    display: none !important;
+  }
+}
+@media (min-height: 575.98px) {
+  .footerPage {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .contact_section {
+    justify-content: center !important;
+  }
+  .contact_section h1,
+  .contact_section .contact_img {
+    margin-bottom: clamp(30px, 25%, 100px) !important;
+  }
+  .icons_holder {
+    margin-bottom: 3rem !important;
+  }
+}
+@media (min-width: 1200px) {
+  .custom_inner_section {
+    padding: 0 10% 0 0;
+    justify-content: start;
+  }
+  .h1,
+  h1 {
+    font-size: calc(1.375rem + 1.5vw);
+  }
+  .h2,
+  h2 {
+    font-size: calc(1.325rem + 0.9vw);
+  }
+  .p,
+  p,
+  .input[type='text'],
+  input[type='text'] {
+    font-size: calc(1rem + 0.25vw);
+  }
+}
+
+/* #endregion */
+
+/*#region Animations*/
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+/*#endregion*/

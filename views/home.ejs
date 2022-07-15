@@ -1,0 +1,159 @@
+<%- include('./partials/header.ejs') %>
+
+<div id="homePage" class="carousel slide" data-bs-touch="true">
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#homePage"
+      data-bs-slide-to="0"
+      class="active my-indicators"
+      aria-current="true"
+      aria-label="Home"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#homePage"
+      data-bs-slide-to="1"
+      class="my-indicators"
+      aria-label="Goals"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#homePage"
+      data-bs-slide-to="2"
+      class="my-indicators"
+      aria-label="Tools"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#homePage"
+      data-bs-slide-to="3"
+      class="my-indicators"
+      aria-label="Contact"
+    ></button>
+  </div>
+  <div class="carousel-inner">
+    <!--* Home section -->
+    <section id="Home">
+      <div class="carousel-item active customSection palette_1">
+        <div class="row d-flex h-100">
+          <!-- Home text -->
+          <div
+            class="col-12 col-sm-6 my-auto text-center justify-content-center text-sm-start custom_inner_section"
+          >
+            <h1>List.doIT</h1>
+            <h2>My first custom non-guided project as fullstack developer</h2>
+            <hr />
+            <!-- TODO: Buttons redirect into SignUp / SignIn Page -->
+            <div class="">
+              <form class="d-grid gap-2 d-flex" action="/signToApp">
+                <button class="btn btn-outline-primary home_btn" type="submit">
+                  Sign in!
+                </button>
+                <button class="btn btn-primary home_btn" type="submit">
+                  Sign up!
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Home List -->
+          <div class="col-12 col-sm-6 mh-100 my-sm-auto text-center">
+            <%- include('./list.ejs') %>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--* Goals section -->
+    <section id="Goals">
+      <div class="carousel-item customSection palette_2">
+        <div class="row d-flex h-100 align-items-center text-center">
+          <!-- Goals text -->
+          <div class="col-12 col-lg-6 order-md-2">
+            <h1 class="palette_aux">Goals</h1>
+            <h2>Log In / Sign Up form</h2>
+            <h2>Create / Delete Lists</h2>
+            <h2>Modify list items</h2>
+            <hr class="palette_aux" />
+          </div>
+          <!-- TODO:Goals Img -->
+          <div class="col-12 col-lg-6 d-flex justify-content-center">
+            <div class="">AAA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--* Tools section -->
+    <section id="Tools">
+      <div class="carousel-item customSection palette_3">
+        <div class="row d-flex h-100 align-items-center text-center">
+          <!-- Tools text -->
+          <div class="col-12 col-lg-6">
+            <h1>Tools and Frameworks</h1>
+            <h2>MongoDB / Mongoose</h2>
+            <h2>Boostrap</h2>
+            <h2>Node.js / Express.js</h2>
+            <h2>EJS</h2>
+            <hr />
+          </div>
+          <!-- TODO:Tools Img -->
+          <div class="col-12 col-lg-6 d-flex justify-content-center">
+            <div class="box"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="Contact">
+      <div class="carousel-item customSection palette_1">
+        <div class="container-fluid h-100 d-flex justify-content-center">
+          <div
+            class="d-flex flex-column w-100 h-100 align-items-center justify-content-between py-3 my-auto contact_section"
+          >
+            <h1 class="mx-auto mb-3">Contact me!</h1>
+            <img
+              class="d-block mx-auto align-items-center contact_img"
+              src="/assets/user-pic.jpg"
+              alt=""
+            />
+            <div class="container-fluid mt-3">
+              <div
+                class="container d-flex w-80 justify-content-evenly icons_holder"
+              >
+                <a
+                  href="https://www.instagram.com/victorvdka/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><ion-icon size="large" name="logo-instagram"> </ion-icon
+                ></a>
+                <a
+                  href="mailto:victorvdka@gmail.com? &subject=Hi! &body=I'm contacting you from..."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><ion-icon size="large" name="mail-outline"></ion-icon
+                ></a>
+                <a
+                  href="http://twitter.com/home"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><ion-icon size="large" name="logo-twitter"></ion-icon
+                ></a>
+              </div>
+              <hr />
+              <p class="text-center">&copy; Victor van der Kolk Alvarez</p>
+            </div>
+          </div>
+        </div>
+        <!-- <footer
+          class="d-flex justify-content-center align-middle py-4 px-4 palette_2"
+        >
+          
+        </footer> -->
+      </div>
+    </section>
+  </div>
+</div>
+
+<%- include('./partials/footer.ejs') %>
